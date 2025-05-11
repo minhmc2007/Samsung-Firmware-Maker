@@ -1,0 +1,29 @@
+Name: Run Bash Script on Main
+
+# Controls when the workflow will run
+on:
+  push:
+    branches:
+      - main  # Only run on pushes to the main branch
+  workflow_dispatch # Allows you to run this workflow manually from the Actions tab
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4 # It's good practice to use a specific version
+
+      # Runs your bash script
+      - name: Run script.sh
+        run: bash ./folder2AP.sh
+        # If your script needs execute permissions and you haven't set them in git:
+        # run: |
+        #   chmod +x ./script.sh
+        #   ./script.sh
