@@ -1,5 +1,6 @@
-# Samsung Firmware Packaging Script
+# Samsung Firmware AP Packaging Script
 
+## .tar.md5 maker
 ## Overview
 
 This bash script finds `.img` and `.bin` firmware files in the current directory, compresses them using LZ4, creates a TAR archive of the compressed files, and appends an MD5 checksum to create an Odin-compatible firmware package (`.tar.md5` format).
