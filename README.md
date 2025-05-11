@@ -24,8 +24,7 @@ This bash script finds `.img` and `.bin` firmware files in the current directory
 ## Usage
 
 ```bash
-chmod +x script.sh
-./script.sh
+bash img2AP.sh
 ```
 
 ## Process
